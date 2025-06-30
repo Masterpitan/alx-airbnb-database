@@ -18,6 +18,8 @@ FROM
     property p
 LEFT JOIN
     review r ON p.property_id = r.property_id;
+ORDER BY
+    p.price_per_night ASC;
 
 -- Full Outer Join
 SELECT
@@ -27,6 +29,8 @@ SELECT
     b.start_date
 FROM
     user u
+FULL OUTER JOIN
+    booking b ON u.user_id = b.user_id
 LEFT JOIN
     booking b ON u.user_id = b.user_id
 
