@@ -63,3 +63,15 @@ This is used to retrieve all users and all bookings (it does not matter if users
     - start_date
 5. Users who have no bookings scuh as the hosts who are yet to boo have NULL in booking fields
 6. Bookings without valid users show NULL for user fields
+
+## SubQueries
+In the code ![subqueries.sql](/database-adv-script/subqueries.sql), I have provided both correlated and non-correlated suqueries for reviews greater than 4 and for users who made more than three bookings
+
+### Key Features:
+For the non-Correlated, the inner query runs first, filtering property IDs before the outer query executes.
+
+**Performance**: Efficient for static filters like fixed rating thresholds.
+
+For the correlated subqueries, the inner query runs for each row in user, checking the count of bookings per user
+
+An ideal use case is making row-by-row comparisons (e.g., user-specific thresholds).
