@@ -15,3 +15,13 @@ CREATE INDEX idx_booking_status ON booking(status);
 
 -- Composite index for frequently joined queries
 CREATE INDEX idx_property_search ON property(location, price_per_night);
+
+-- QUERY ONE
+EXPLAIN ANALYZE SELECT * FROM "user" WHERE email = 'test@example.com';
+
+-- QUERY TWO
+EXPLAIN ANALYZE SELECT * FROM property WHERE location = 'Paris';
+
+-- QUERY THREE
+EXPLAIN ANALYZE SELECT * FROM booking
+WHERE start_date > '2023-01-01' AND end_date < '2023-12-31';
