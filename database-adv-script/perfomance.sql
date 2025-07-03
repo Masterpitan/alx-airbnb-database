@@ -83,7 +83,7 @@ JOIN
 LEFT JOIN
     payment py ON b.booking_id = py.booking_id
 WHERE
-    b.start_date > CURRENT_DATE - INTERVAL '6 months'
+    b.start_date > CURRENT_DATE AND INTERVAL '6 months'
 ORDER BY
     b.start_date DESC
 LIMIT 100;
