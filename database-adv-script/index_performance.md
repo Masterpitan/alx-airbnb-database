@@ -1,5 +1,5 @@
 Database Indexes (database_index.sql)
-
+### database_index.sql
 ```sql
 -- Indexes for User table
 CREATE INDEX idx_user_email ON "user"(email);
