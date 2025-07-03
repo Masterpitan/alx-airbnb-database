@@ -1,8 +1,7 @@
--- DATABASE INDEX (index.sql)
+Database Indexes (database_index.sql)
 
-
--- Indexes for User table
 ```sql
+-- Indexes for User table
 CREATE INDEX idx_user_email ON "user"(email);
 CREATE INDEX idx_user_role ON "user"(role);
 
@@ -29,7 +28,7 @@ One of the query was tested measuring execution time before and after indexing.
 
 ## Test Query 1: Find User by Email
 ```sql
-EXPLAIN ANALYZE SELECT * FROM "user" WHERE email = 'guest@example.com';
+EXPLAIN ANALYZE SELECT * FROM "user" WHERE email = 'adepitan.cinqa@gmail.com';
 ```
 ### Before Indexing:
 
